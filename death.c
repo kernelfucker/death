@@ -16,19 +16,6 @@ typedef struct{
 	unsigned long long write_bytes;
 } IOStat;
 
-void help(const char *death){
-	printf("usage: %s [options]..\n", death);
-	printf("options:\n");
-	printf("  -h	display this\n");
-	printf("  -v	show version information\n");
-	exit(1);
-}
-
-void show_version(){
-	printf("death-%s\n", version);
-	exit(1);
-}
-
 void get_io(const char *devname, IOStat *stat){
 	FILE *fp = fopen("/proc/diskstats", "r");
 	if(!fp){
@@ -53,6 +40,19 @@ void get_io(const char *devname, IOStat *stat){
 	fclose(fp);
 	stat->read_bytes = 0;
 	stat->write_bytes = 0;
+}
+
+void help(const char *death){
+	printf("usage: %s [options]..\n", death);
+	printf("options:\n");
+	printf("  -h	display this\n");
+	printf("  -v	show version information\n");
+	exit(1);
+}
+
+void show_version(){
+	printf("death-%s\n", version);
+	exit(1);
 }
 
 int main(int argc, char *argv[]){
