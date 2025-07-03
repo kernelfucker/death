@@ -10,4 +10,4 @@ $ ./death /dev/sda
 $ ./death /dev/sdb
 
 # example
-![image](https://github.com/user-attachments/assets/a9387013-b49e-4a94-b6dc-5dc9d95b5891)
+![image](https://github.com/user-attachments/assets/beaca386-6554-4ed0-b397-5125818c229d)
