@@ -45,8 +45,8 @@ void get_io(const char *devname, IOStat *stat){
 void help(const char *death){
 	printf("usage: %s [options]..\n", death);
 	printf("options:\n");
-	printf("  -h	display this\n");
 	printf("  -v	show version information\n");
+	printf("  -h	display this\n");
 	exit(1);
 }
 
